@@ -1,0 +1,7 @@
+services:
+  texlive-ja:
+    image: paperist/texlive-ja:alpine
+    volumes: 
+      - ../:/workdir
+      - ~/.latexmkrc:/root/.latexmkrc
+    command: /bin/sh -c "while sleep 1000; do :; done"
