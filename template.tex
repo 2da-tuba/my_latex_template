@@ -1,9 +1,6 @@
 \RequirePackage{plautopatch}
-\documentclass[dvipdfmx, a4j, uplatex]{jsarticle}
-
-% XeLaTeXの場合は以下に変更
-% \documentclass[xelatex, ja=standard, a4j]{bxjsarticle}
-% またpxjahyperは削除する
+\documentclass[autodetect-engine, dvipdfmx-if-dvi, ja=standard, a4j]{bxjsarticle}
+% オプションはhttps://qiita.com/Aruneko/items/13e015bce0112143f277 より抜粋
 %
 % Macの場合、以下の設定でヒラギノが使える
 % \usepackage{zxjatype}
@@ -11,7 +8,8 @@
 % \setCJKsansfont[BoldFont=ヒラギノ角ゴ ProN W6]{ヒラギノ角ゴ ProN W3}
 \usepackage[hiresbb]{graphicx}
 \usepackage[hidelinks]{hyperref}
-\usepackage{pxjahyper}
+% pxjahyperはplatex以外の時は削除する
+% \usepackage{pxjahyper}
 \usepackage{float}
 \usepackage{amssymb, amsmath}
 
